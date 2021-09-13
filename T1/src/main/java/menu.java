@@ -8,14 +8,19 @@ public class menu extends Account {
 	{
 		
 		int Account_No = 0001;
-		System.out.println("Choose any option: \n1-Open a new account/Close an account.\n2-Login to a specific account.\n3-Perform account operations.\n4-Specify the Interest Rate.\n5-Display all account details.\n6-Display all accounts deductions along with account details.\n");
+		//System.out.println("Choose any option: \n1-Open a new account/Close an account.\n2-Login to a specific account.\n3-Perform account operations.\n4-Specify the Interest Rate.\n5-Display all account details.\n6-Display all accounts deductions along with account details.\n7-EXIT \n");
 		//Account a1=new Account();
 		//a1.information_new();
 		
 		//menu
+		boolean check=true;
 		Scanner input = new Scanner(System.in);
-		int number = input.nextInt();
-		switch(number) {
+		//int number = input.nextInt();
+		while(check==true)
+		{
+			System.out.println("\n\nChoose any option: \n1-Open a new account/Close an account.\n2-Login to a specific account.\n3-Perform account operations.\n4-Specify the Interest Rate.\n5-Display all account details.\n6-Display all accounts deductions along with account details.\n7-EXIT \n");
+			int number = input.nextInt();
+			switch(number) {
 		  case 1:
 			  System.out.println("\nEnter customer's name: ");
 			  String C_name = input.next();
@@ -29,9 +34,10 @@ public class menu extends Account {
 			  */
 			  System.out.println("\nEnter the amount of balance you want to insert in your new account:  ");
 			  int C_bal = input.nextInt();
-			 			  	
+			  System.out.println("\nYour account has been created. Account details are : \n");
 		    Account a1= new Account(C_name,C_address,C_phone_no,Account_No,C_bal);
-		    System.out.println(a1.getAddress() + " " + a1.getBalance() + " " + a1.getName() + " " + a1.getPhoneNo() + " " + a1.gettAccountNo() );
+		    
+		    System.out.println("Name = " + a1.getName() + " Phone Number =  " + a1.getPhoneNo() + " Address = " + a1.getAddress() + " Balance = " + a1.getBalance() + " Account No = " + a1.gettAccountNo() );
 		    Account_No=Account_No+1;
 		    break;
 		  case 2:
@@ -49,8 +55,10 @@ public class menu extends Account {
 		  case 6:
 			    // code block
 			    break;
-		  default:
-		    // code block
+		  case 7:
+			  check=false;
+			  	break;
+			}
 		}
 	}
 }

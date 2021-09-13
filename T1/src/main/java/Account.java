@@ -11,6 +11,7 @@ public class Account extends Customer {
 		super(name,address,phno,account_no);
 		this.balance=bal;
 		//this.created_date=created_date;
+		System.out.println("Account created on ");
 		System.out.println(java.time.LocalDate.now());
 	}
 	
