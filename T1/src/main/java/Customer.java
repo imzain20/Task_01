@@ -49,7 +49,4 @@ public class Customer {
 		return this.account_no;
 	}
 	
-	 public void information() {
-		    System.out.println("Working of Braking");
-		  }
 }

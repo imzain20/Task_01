@@ -18,7 +18,7 @@ public class menu extends Account {
 		//int number = input.nextInt();
 		while(check==true)
 		{
-			System.out.println("\n\nChoose any option: \n1-Open a new account/Close an account.\n2-Login to a specific account.\n3-Perform account operations.\n4-Specify the Interest Rate.\n5-Display all account details.\n6-Display all accounts deductions along with account details.\n7-EXIT \n");
+			System.out.println("\n\nChoose any option: \n1-Open a new account/Close an account.\n2-Login to a specific account.\n3-Perform account operations.\n4-Specify the Interest Rate.\n5-Display all account details.\n6-Display all accounts deductions along with account details. \7-Withdraw any amount. \n8-EXIT \n");
 			int number = input.nextInt();
 			switch(number) {
 		  case 1:
@@ -39,6 +39,11 @@ public class menu extends Account {
 		    
 		    System.out.println("Name = " + a1.getName() + " Phone Number =  " + a1.getPhoneNo() + " Address = " + a1.getAddress() + " Balance = " + a1.getBalance() + " Account No = " + a1.gettAccountNo() );
 		    Account_No=Account_No+1;
+		    
+		    System.out.println("\nEnter the amount that you want to withdraw: ");
+		    int withdraw_amount = input.nextInt();
+		    
+		    System.out.println(a1.makeWithdrawal(withdraw_amount)); 
 		    break;
 		  case 2:
 		    // code block
@@ -56,6 +61,9 @@ public class menu extends Account {
 			    // code block
 			    break;
 		  case 7:
+			  	// code block
+			   
+		  case 8:
 			  check=false;
 			  	break;
 			}
